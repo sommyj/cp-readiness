@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Justin</title>
+	<link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.min.css">
+	<style type="text/css">
+		.wrapper{
+			margin-top: 110px;
+		}
+
+		.form{
+			max-width: 680px;
+			background: #fff;
+			padding: 15px 35px 5px; 
+			margin: auto;
+			
+		}
+
+		h1{
+			text-align: center;
+		}
+
+		.buttonsDiv{
+			text-align: center;
+			margin-top: 20px;
+		}
+	</style>
+</head>
+<body>
+	<div class="wrapper">
+		<div class="form">
+			<img src="images/google_logo.png" class="img-responsive">
+			<form method="post" action="" id="searchForm">
+				<input type="text" id="searchTextbox" class="form-control">
+				<div class="buttonsDiv">
+					<input type="button" id="gSearchBtn" value="Google Search" class="btn btn-default" onclick="validate('gSearchBtn', 'searchTextbox', 'searchForm')">
+					<input type="button" id="feelingLuckyBtn" value="I'm Feeling Lucky" class="btn btn-default" onclick="validate('gSearchBtn', 'searchTextbox', 'searchForm')">
+				</div>
+			</form>
+		</div>
+	</div>
+
+	<script type="text/javascript">
+		function validate(btn, txtbox, form){
+			var button=document.getElementById(btn);
+			var textbox=document.getElementById(txtbox);
+			var form=document.getElementById(form);
+
+			if(textbox.value!=""){
+				alert(textbox.value);
+			}else{
+				alert("Please type in something.");
+			}
+		}
+	</script>
+</body>
+</html>
